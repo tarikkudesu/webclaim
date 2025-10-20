@@ -1,0 +1,9 @@
+services:
+    web:
+        container_name: webclaim
+        build: src
+        image: webclaim:tar
+        ports:
+            - '7417:7417'
+        volumes:
+            - ./src/code:/code
