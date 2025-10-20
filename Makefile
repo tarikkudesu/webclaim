@@ -8,7 +8,7 @@ RESET			=	\033[0m
 cols			=	$$(tput cols)
 SE				=	$$(printf "%-$(cols)s" "_" | tr ' ' '_')
 
-all: up
+all: up in
 
 up:
 	@docker compose -f $(COMPOSEFILE) $@ --build -d
