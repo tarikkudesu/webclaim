@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Lexend_Deca } from 'next/font/google';
 import './globals.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 const lexendDeca = Lexend_Deca({ subsets: ['latin'] });
 
@@ -16,7 +18,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${lexendDeca.className} antialiased`}>{children}</body>
+			<body className={`${lexendDeca.className} antialiased`}>
+				<Header></Header>
+				{children}
+				<Footer></Footer>
+			</body>
 		</html>
 	);
 }
